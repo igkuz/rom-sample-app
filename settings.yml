@@ -7,7 +7,8 @@ development:
     password: ''
     encoding: 'utf8mb4'
 
-  test:
+test:
+  db:
     host: 'db'
     port: 3306
     name: 'rom_app_test'

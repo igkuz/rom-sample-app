@@ -7,3 +7,8 @@ gem 'mysql2'
 
 gem "awesome_print", require:"ap"
 gem 'pry'
+
+group :test do
+  gem 'rspec'
+  gem 'rom-factory'
+end
