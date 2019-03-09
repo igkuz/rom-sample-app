@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_USER="root"
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql:/var/lib/mysql
+
+  app:
+    build: .
+    volumes:
+      - .:/rom-sample-app
+    depends_on:
+      - db
+
+volumes:
+  mysql:

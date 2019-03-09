@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require_relative 'boot'
+
+configuration = ROM::Configuration.new(:sql, "mysql2:///#{DB_CONFIG[:name]}", DB_CONFIG)
+MAIN_CONTAINER = ROM.container(configuration)
+
+Pry.start
