@@ -1,0 +1,16 @@
+development:
+  db:
+    host: 'db'
+    port: 3306
+    name: 'rom_app_development'
+    username: 'root'
+    password: ''
+    encoding: 'utf8mb4'
+
+  test:
+    host: 'db'
+    port: 3306
+    name: 'rom_app_test'
+    username: 'root'
+    password: ''
+    encoding: 'utf8mb4'
