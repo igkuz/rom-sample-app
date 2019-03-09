@@ -4,6 +4,10 @@ ENV['BUNDLE_GEMFILE'] ||= File.join(APP_ROOT, '/', 'Gemfile')
 require 'bundler'
 Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 
+Dir[File.join(APP_ROOT, '/lib/**/*.rb')].each do |f|
+  require f
+end
+
 DB_CONFIG = {
   name: 'rom_app_development',
   host: 'db',
